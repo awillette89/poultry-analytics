@@ -1,2 +1,2 @@
-# capstone-codeyou
-This is the repository for the capstone project of my data analysis course.
+https://www.kaggle.com/datasets/kilanisikiru/poultry-dataset-weight-growth-revenue-expenses - poultry_farm_dataset
+https://www.kaggle.com/datasets/faysal1998/environmental-effect-on-egg-production/data - Egg_Production
