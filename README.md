@@ -1,4 +1,3 @@
-https://www.kaggle.com/datasets/kilanisikiru/poultry-dataset-weight-growth-revenue-expenses - poultry_farm_dataset
 https://www.kaggle.com/datasets/faysal1998/environmental-effect-on-egg-production/data - Egg_Production
 Amount_of_chicken: This likely represents the number of chickens in the farm or enclosure.
 
@@ -24,4 +23,4 @@ n_hens	double	number of hens produced by hens for a given month-type-process com
 n_eggs	double	number of eggs producing eggs for a given month-type-process combo
 source	character	Original USDA report from which data are sourced. Values correspond to titles of PDF reports. Date of report is included in title.
 
-https://www.fao.org/faostat/en/#data/QCL - FAOSTAT_data_en_6-22-2025
+RUBRIC: https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform
