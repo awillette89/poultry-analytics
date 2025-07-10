@@ -5,3 +5,5 @@ https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F - 
 
 
 RUBRIC: https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform
+
+GUIDELINES: https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0
