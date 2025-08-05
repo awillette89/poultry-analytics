@@ -1,27 +1,27 @@
 # Project Setup Instructions
 ## To set up and run this project:
 
-### Clone the repository to your local machine using Git:
+### 1. Clone the repository to your local machine using Git:
 git clone https://github.com/awillette89/poultry-analytics.git
 
-### Navigate to the project directory:
+### 2. Navigate to the project directory:
 cd poultry-analytics
 
-### Create a virtual environment (recommended Python 3.12 or later):
+### 3 Create a virtual environment (recommended Python 3.12 or later):
 python -m venv venv
 
-### Activate the virtual environment:
+### 4. Activate the virtual environment:
 
 On Windows: venv\Scripts\activate
 On macOS/Linux: source venv/bin/activate
 
 
-### Install the required dependencies from the requirements.txt file:
+### 5. Install the required dependencies from the requirements.txt file:
 pip install -r requirements.txt
 
-### Launch Jupyter Notebook.
+### 6. Launch Jupyter Notebook.
 
-### Open chickens.ipynb in the browser and run the cells sequentially.
+### 7. Open chickens.ipynb in the browser and run the cells sequentially.
 
 This project analyzes egg production and price trends in the United States from 2016 to 2021. By examining data on table egg production and monthly prices, we identify patterns, seasonal variations, and potential correlations between production volumes and market prices. Once running, the user can expect a narrative-driven exploration in the Jupyter Notebook, including data cleaning, feature engineering, visualizations, and insights into the poultry industry. No coding knowledge is required to follow the explanations, though running the code requires a Python environment.
 Technologies Used
