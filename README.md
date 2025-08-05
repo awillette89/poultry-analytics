@@ -7,25 +7,22 @@ git clone https://github.com/awillette89/poultry-analytics.git
 ### Navigate to the project directory:
 cd poultry-analytics
 
-Create a virtual environment (recommended Python 3.12 or later):
+### Create a virtual environment (recommended Python 3.12 or later):
 python -m venv venv
 
-Activate the virtual environment:
+### Activate the virtual environment:
 
 On Windows: venv\Scripts\activate
 On macOS/Linux: source venv/bin/activate
 
 
-Install the required dependencies from the requirements.txt file:
+### Install the required dependencies from the requirements.txt file:
 pip install -r requirements.txt
 
-Launch Jupyter Notebook:
-jupyter notebook
+### Launch Jupyter Notebook.
 
-Open chickens.ipynb in the browser and run the cells sequentially.
+### Open chickens.ipynb in the browser and run the cells sequentially.
 
-This setup has been tested by cloning the repository to a new folder and on a different machine. Peers from the cohort have also cloned and run the project successfully.
-Project Overview
 This project analyzes egg production and price trends in the United States from 2016 to 2021. By examining data on table egg production and monthly prices, we identify patterns, seasonal variations, and potential correlations between production volumes and market prices. Once running, the user can expect a narrative-driven exploration in the Jupyter Notebook, including data cleaning, feature engineering, visualizations, and insights into the poultry industry. No coding knowledge is required to follow the explanations, though running the code requires a Python environment.
 Technologies Used
 
@@ -34,13 +31,13 @@ Matplotlib/Seaborn: Employed to generate visualizations like line plots for pric
 SQLite3: Integrated to store cleaned data in a database, enabling SQL queries for efficient data retrieval and joins.
 Jupyter Notebook: The primary development tool for presenting code, explanations, and results in a cohesive, narrative format.
 
-Data Source
+# Data Source
 The data is sourced from the United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) Quick Stats database.
 
-Egg Prices: https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA
-Egg Production: https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F
+#### Egg Prices: https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA
+#### Egg Production: https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F
 
-Data Dictionary
+# Data Dictionary
 Egg Prices Dataset (egg-prices.csv)
 
 YEAR: The year of the data record (integer, e.g., 2016).
@@ -77,7 +74,7 @@ Domain Category: Category, "NOT SPECIFIED" (string).
 Value: The production value, may include "(D)" for undisclosed (string).
 CV (%): Coefficient of variation, often blank (string).
 
-Data Summary
+# Data Summary
 The egg prices dataset contains 72 rows covering monthly US national egg prices from January 2016 to December 2021. Key statistics include:
 
 Average all utilization price: ~0.90 $/dozen (min: 0.483, max: 1.89).
@@ -87,39 +84,14 @@ Data types: Mostly floats for prices, strings for categorical fields.
 The egg production dataset includes 8,212 rows for state-level monthly production in 2016-2021, with values in dozens or individual eggs for hatching and table types. After cleaning, 2,518 rows remain, focusing on production measured in dozens. Production volumes vary by state, with some values initially undisclosed "(D)" removed. It features quantitative production metrics and qualitative location details, enabling analysis of regional trends.
 Note on Missing Data: Certain states may appear underrepresented or absent in visualizations and analysis due to undisclosed production values marked as "(D)" in the original dataset (e.g., for states like Arkansas or California in specific months). These were removed during cleaning to ensure data accuracy, but this may affect completeness for those regions. Refer to the notebook's cleaning steps for details.
 For more details, refer to the chickens.ipynb notebook where data is loaded and explored.
-Project Objective
 
-Objective: Investigate the relationship between egg production volumes and market prices across the US from 2016 to 2021.
+# Project Objective
+
+Investigate the relationship between egg production volumes and market prices across the US from 2016 to 2021.
 Guiding Question: How do seasonal and state-level production changes correlate with price fluctuations for all egg types and table eggs specifically?
 Insight Goal: Uncover trends that could inform poultry industry stakeholders about pricing strategies and production planning.
 
-Project Plan Submission
-
-Methods:
-
-Data ingestion using Pandas to load CSV files.
-Data cleaning to handle nulls, remove undisclosed values, and normalize units.
-Feature engineering to create a total production column by state.
-SQLite database creation with two tables (production, prices) and SQL joins.
-Visualization with Matplotlib/Seaborn for three plot types (e.g., bar, line, scatter).
-
-
-Rationale:
-
-Pandas is chosen for its robust data manipulation capabilities.
-Cleaning ensures data integrity for accurate analysis.
-Feature engineering adds value by aggregating production data.
-SQLite supports structured querying and joins for efficient data retrieval.
-Visualizations provide clear, actionable insights for non-technical audiences.
-
-
-Approach Suitability:
-
-This approach effectively addresses the objective by combining statistical analysis with visual representation, suitable for identifying correlations and trends. The use of a database enhances scalability, aligning with real-world data management practices.
-
-
-
-Additional Resources
+# Additional Resources
 
 Rubric: https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform
 Guidelines: https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0
