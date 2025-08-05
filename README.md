@@ -1,52 +1,53 @@
-#Project Setup Instructions
-##To set up and run this project:
+# Project Setup Instructions
+## To set up and run this project:
 
-###Clone the repository to your local machine using Git:
+### Clone the repository to your local machine using Git:
 git clone https://github.com/awillette89/poultry-analytics.git
 
-###Navigate to the project directory:
+### Navigate to the project directory:
 cd poultry-analytics
 
-###Create a virtual environment (recommended Python 3.12 or later):
+Create a virtual environment (recommended Python 3.12 or later):
 python -m venv venv
 
-##Activate the virtual environment:
+Activate the virtual environment:
 
 On Windows: venv\Scripts\activate
 On macOS/Linux: source venv/bin/activate
 
 
-##Install the required dependencies from the requirements.txt file:
+Install the required dependencies from the requirements.txt file:
 pip install -r requirements.txt
 
-##Launch Jupyter Notebook:
+Launch Jupyter Notebook:
 jupyter notebook
 
-##Open chickens.ipynb in the browser and run the cells sequentially.
+Open chickens.ipynb in the browser and run the cells sequentially.
 
-##Project Overview
+This setup has been tested by cloning the repository to a new folder and on a different machine. Peers from the cohort have also cloned and run the project successfully.
+Project Overview
 This project analyzes egg production and price trends in the United States from 2016 to 2021. By examining data on table egg production and monthly prices, we identify patterns, seasonal variations, and potential correlations between production volumes and market prices. Once running, the user can expect a narrative-driven exploration in the Jupyter Notebook, including data cleaning, feature engineering, visualizations, and insights into the poultry industry. No coding knowledge is required to follow the explanations, though running the code requires a Python environment.
 Technologies Used
 
-###Pandas: Used to load, clean, and manipulate the datasets, such as handling missing values and creating new features for analysis.
+Pandas: Used to load, clean, and manipulate the datasets, such as handling missing values and creating new features for analysis.
 Matplotlib/Seaborn: Employed to generate visualizations like line plots for price trends and bar charts for production by state.
 SQLite3: Integrated to store cleaned data in a database, enabling SQL queries for efficient data retrieval and joins.
 Jupyter Notebook: The primary development tool for presenting code, explanations, and results in a cohesive, narrative format.
 
-##Data Source
+Data Source
 The data is sourced from the United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) Quick Stats database.
 
-###Egg Prices: https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA
-###Egg Production: https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F
+Egg Prices: https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA
+Egg Production: https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F
 
-##Data Dictionary
+Data Dictionary
 Egg Prices Dataset (egg-prices.csv)
 
-###YEAR: The year of the data record (integer, e.g., 2016).
-###LOCATION: The geographic location, typically "US TOTAL" for national aggregates (string).
-###STATE ANSI: ANSI code for the state, blank for US total (string).
-###ASD CODE: Agricultural Statistics District code, blank for US total (string).
-###COUNTY ANSI: ANSI code for the county, blank for US total (string).
+YEAR: The year of the data record (integer, e.g., 2016).
+LOCATION: The geographic location, typically "US TOTAL" for national aggregates (string).
+STATE ANSI: ANSI code for the state, blank for US total (string).
+ASD CODE: Agricultural Statistics District code, blank for US total (string).
+COUNTY ANSI: ANSI code for the county, blank for US total (string).
 REFERENCE PERIOD: The month of the record (string, e.g., "JAN").
 COMMODITY: The commodity type, always "EGGS" (string).
 ALL UTILIZATION PRACTICES in $ / DOZEN: Average price per dozen for all egg utilization practices (float).
