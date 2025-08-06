@@ -1,111 +1,110 @@
 # Project Setup Instructions
-## To set up and run this project:
 
-### 1. Clone the repository to your local machine using Git:
-git clone https://github.com/awillette89/poultry-analytics.git
+## To Set Up and Run This Project
 
-### 2. Navigate to the project directory:
-cd poultry-analytics
+1. Clone the repository to your local machine using Git:  
+   `git clone https://github.com/awillette89/poultry-analytics.git`
 
-### 3 Create a virtual environment (recommended Python 3.12 or later):
-python -m venv venv
+2. Navigate to the project directory on your local machine.
 
-### 4. Activate the virtual environment:
+3. Create a virtual environment:  
+   `python -m venv venv`
 
-On Windows: venv\Scripts\activate
-On macOS/Linux: source venv/bin/activate
+4. Activate the virtual environment. See virtual environment commands below.
 
+5. Install the required dependencies from the `requirements.txt` file:  
+   `pip install -r requirements.txt`
 
-### 5. Install the required dependencies from the requirements.txt file:
-pip install -r requirements.txt
+6. Open `chickens.ipynb` in the browser and run the cells sequentially.
 
-### 6. Launch Jupyter Notebook.
+## Virtual Environment Commands
 
-### 7. Open chickens.ipynb in the browser and run the cells sequentially.
+| **Command** | **Windows**                       | **Linux/Mac**                    |
+|-------------|-----------------------------------|----------------------------------|
+| Create      | `python -m venv venv`             | `python3 -m venv venv`           |
+| Activate    | `venv\Scripts\activate`           | `source venv/bin/activate`       |
+| Install     | `pip install -r requirements.txt` | `pip install -r requirements.txt`|
+| Deactivate  | `deactivate`                      | `deactivate`                     |
 
-## Virtual Environment Commands 
-| **Command** |           **Windows**                 |            **Linux/Mac**             | 
-| ----------  | ------------------------------------- | ------------------------------------ |
-|  Create     |    `python -m venv venv`              |   `python3 -m venv venv`             |
-|  Activate   |    `source venv/Scripts/activate`     |   `source venv/bin/activate`         |
-|  Install    |    `pip install -r requirements.txt`  |   `pip install -r requirements.txt`  |
-|  Deactivate |    `deactivate`                       |   `deactivate`                       |
+## Overview
 
-## Overview:
+- This project analyzes egg production and price trends in the United States from 2016 to 2021.
+- It uncovers patterns, seasonal variations, and correlations between production volumes and market prices.
+- Users can explore data in `chickens.ipynb` with data cleaning, feature engineering, visualizations, and poultry industry insights.
+- No coding knowledge is needed to follow notebook explanations, but a Python environment is required to run code.
 
-This project analyzes egg production and price trends in the United States from 2016 to 2021. By examining data on table egg production and monthly prices, we identify patterns, seasonal variations, and potential correlations between production volumes and market prices. Once running, the user can expect a narrative-driven exploration in the Jupyter Notebook, including data cleaning, feature engineering, visualizations, and insights into the poultry industry. No coding knowledge is required to follow the explanations, though running the code requires a Python environment.
-Technologies Used
+### Technologies Used
 
-Pandas: Used to load, clean, and manipulate the datasets, such as handling missing values and creating new features for analysis.
-Matplotlib/Seaborn: Employed to generate visualizations like line plots for price trends and bar charts for production by state.
-SQLite3: Integrated to store cleaned data in a database, enabling SQL queries for efficient data retrieval and joins.
-Jupyter Notebook: The primary development tool for presenting code, explanations, and results in a cohesive, narrative format.
+- **Pandas**: Pandas loads, cleans, and manipulates datasets, handles missing values, and creates features.
+- **Matplotlib**: Matplotlib generates visualizations like line plots for price trends and bar charts for state production.
+- **SQLite3**: SQLite3 stores cleaned data in a database and enables SQL queries for retrieval and joins.
+- **Jupyter Notebook**: Jupyter Notebook presents code, comments, and observations in a narrative format.
 
-# Data Source
-The data is sourced from the United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) Quick Stats database.
-
-#### Egg Prices: https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA
-#### Egg Production: https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F
-
-# Data Dictionary
-Egg Prices Dataset (egg-prices.csv)
-
-YEAR: The year of the data record (integer, e.g., 2016).
-
-LOCATION: The geographic location, typically "US TOTAL" for national aggregates (string).
-
-STATE ANSI: ANSI code for the state, blank for US total (string).
-
-ASD CODE: Agricultural Statistics District code, blank for US total (string).
-COUNTY ANSI: ANSI code for the county, blank for US total (string).
-REFERENCE PERIOD: The month of the record (string, e.g., "JAN").
-COMMODITY: The commodity type, always "EGGS" (string).
-ALL UTILIZATION PRACTICES in $ / DOZEN: Average price per dozen for all egg utilization practices (float).
-ALL UTILIZATION PRACTICES, TABLE in $ / DOZEN: Average price per dozen for table eggs specifically (float).
-
-Egg Production Dataset (egg-production.csv)
-
-Program: The survey program, typically "SURVEY" (string).
-Year: The year of production (integer).
-Period: The month of production (string).
-Week Ending: Ending date of the week, often blank (string).
-Geo Level: Geographic level, e.g., "STATE" (string).
-State: The state name (string).
-State ANSI: ANSI code for the state (string).
-Ag District: Agricultural district, often blank (string).
-Ag District Code: Code for agricultural district (string).
-County: County name, often blank (string).
-County ANSI: ANSI code for the county (string).
-Zip Code: Zip code, often blank (string).
-Region: Region, often blank (string).
-watershed_code: Watershed code, typically "00000000" (string).
-Watershed: Watershed name, often blank (string).
-Commodity: The commodity, "EGGS" (string).
-Data Item: Description of the data, e.g., "EGGS, TABLE - PRODUCTION, MEASURED IN DOZEN" (string).
-Domain: Domain category, "TOTAL" (string).
-Domain Category: Category, "NOT SPECIFIED" (string).
-Value: The production value, may include "(D)" for undisclosed (string).
-CV (%): Coefficient of variation, often blank (string).
-
-# Data Summary
-The egg prices dataset contains 72 rows covering monthly US national egg prices from January 2016 to December 2021. Key statistics include:
-
-Average all utilization price: ~0.90 $/dozen (min: 0.483, max: 1.89).
-Average table egg price: ~0.66 $/dozen (min: 0.197, max: 1.81).
-Data types: Mostly floats for prices, strings for categorical fields.
-
-The egg production dataset includes 8,212 rows for state-level monthly production in 2016-2021, with values in dozens or individual eggs for hatching and table types. After cleaning, 2,518 rows remain, focusing on production measured in dozens. Production volumes vary by state, with some values initially undisclosed "(D)" removed. It features quantitative production metrics and qualitative location details, enabling analysis of regional trends.
-Note on Missing Data: Certain states may appear underrepresented or absent in visualizations and analysis due to undisclosed production values marked as "(D)" in the original dataset (e.g., for states like Arkansas or California in specific months). These were removed during cleaning to ensure data accuracy, but this may affect completeness for those regions. Refer to the notebook's cleaning steps for details.
-For more details, refer to the chickens.ipynb notebook where data is loaded and explored.
 
 # Project Objective
 
-Investigate the relationship between egg production volumes and market prices across the US from 2016 to 2021.
-Guiding Question: How do seasonal and state-level production changes correlate with price fluctuations for all egg types and table eggs specifically?
-Insight Goal: Uncover trends that could inform poultry industry stakeholders about pricing strategies and production planning.
+- This project investigates the relationship between egg production volumes and market prices across the US from 2016 to 2021.
+- **Guiding question**: How do seasonal and state-level production changes correlate with price fluctuations for all egg types and table eggs?
+- **Insight goal**: Uncover trends to inform poultry industry stakeholders on pricing strategies and production planning.
+
+# Data Source
+
+- Data is sourced from the United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) Quick Stats database.
+- **Egg Prices**: [https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA](https://www.nass.usda.gov/Quick_Stats/Lite/#A4980698-4993-3EEA-A05D-C1D0E27DACAA)
+- **Egg Production**: [https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F](https://quickstats.nass.usda.gov/results/673A75CC-C22C-3B32-A3F5-0AB866AF7F0F)
+
+# Data Dictionary
+
+## Egg Prices Dataset (egg-prices.csv)
+
+- **YEAR (int64)**: YEAR contains the year of the data record.
+- **LOCATION (object)**: LOCATION specifies the geographic location, typically US total for aggregates.
+- **STATE ANSI (object)**: STATE ANSI provides the ANSI code for the state, blank for US total.
+- **ASD CODE (object)**: ASD CODE indicates the agricultural statistics district code, blank for US total.
+- **COUNTY ANSI (object)**: COUNTY ANSI denotes the ANSI code for the county, blank for US total.
+- **REFERENCE PERIOD (object)**: REFERENCE PERIOD identifies the month of the record.
+- **COMMODITY (object)**: COMMODITY specifies the commodity type, which is eggs.
+- **ALL UTILIZATION PRACTICES in $ / DOZEN (float64)**: ALL UTILIZATION PRACTICES in $ / DOZEN provides the average price per dozen for all practices.
+- **ALL UTILIZATION PRACTICES, TABLE in $ / DOZEN (float64)**: ALL UTILIZATION PRACTICES, TABLE in $ / DOZEN provides the average price per dozen for table eggs.
+
+## Egg Production Dataset (egg-production.csv)
+
+- **Program (object)**: Program specifies the survey program, typically survey.
+- **Year (int64)**: Year contains the year of production.
+- **Period (object)**: Period identifies the month of production.
+- **Week Ending (object)**: Week Ending provides the week ending date, often blank.
+- **Geo Level (object)**: Geo Level specifies the geographic level, typically state.
+- **State (object)**: State contains the state name.
+- **State ANSI (object)**: State ANSI provides the ANSI code for the state.
+- **Ag District (object)**: Ag District specifies the agricultural district, often blank.
+- **Ag District Code (object)**: Ag District Code provides the code for the agricultural district.
+- **County (object)**: County contains the county name, often blank.
+- **County ANSI (object)**: County ANSI provides the ANSI code for the county.
+- **Zip Code (object)**: Zip Code contains the zip code, often blank.
+- **Region (object)**: Region specifies the region, often blank.
+- **watershed_code (object)**: watershed_code provides the watershed code, typically 00000000.
+- **Watershed (object)**: Watershed contains the watershed name, often blank.
+- **Commodity (object)**: Commodity specifies the commodity, which is eggs.
+- **Data Item (object)**: Data Item provides the data description.
+- **Domain (object)**: Domain specifies the domain category, typically total.
+- **Domain Category (object)**: Domain Category specifies the category, typically not specified.
+- **Value (object)**: Value contains the production value and may include (d) for undisclosed.
+- **CV (%) (object)**: CV (%) provides the coefficient of variation, often blank.
+
+# Data Summary
+
+- The egg prices dataset contains 72 rows of monthly US national egg prices from January 2016 to December 2021.
+- The average all utilization price is approximately 0.90 $/dozen (minimum: 0.483, maximum: 1.89).
+- The average table egg price is approximately 0.66 $/dozen (minimum: 0.197, maximum: 1.81).
+- Data types include floats for prices and strings for categorical fields.
+- The egg production dataset includes 8,212 rows of state-level monthly production from 2016 to 2021.
+- After cleaning, 2,518 rows remain, focusing on production in dozens with undisclosed "(d)" values removed.
+- The dataset features quantitative production metrics and qualitative location details for regional trends.
+- **Note on missing data**: Some states may appear underrepresented due to "(d)" values (e.g., Arkansas, California in specific months). These were removed for accuracy, which may affect completeness. See the notebook’s cleaning steps for details.
+- Details are available in `chickens.ipynb`, where data is loaded and explored.
 
 # Additional Resources
 
-Rubric: https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform
-Guidelines: https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0
-Interview Information: https://docs.google.com/document/d/1gumZocblkZjVEG3G96DD-msB8mhJux7GiiCyg47uY24/edit?tab=t.0#heading=h.5i7odw1grzjo
+- **Rubric**: [https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform](https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform)
+- **Guidelines**: [https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0](https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0)
+- **Interview Information**: [https://docs.google.com/document/d/1gumZocblkZjVEG3G96DD-msB8mhJux7GiiCyg47uY24/edit?tab=t.0#heading=h.5i7odw1grzjo](https://docs.google.com/document/d/1gumZocblkZjVEG3G96DD-msB8mhJux7GiiCyg47uY24/edit?tab=t.0#heading=h.5i7odw1grzjo)
