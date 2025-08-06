@@ -23,6 +23,16 @@ pip install -r requirements.txt
 
 ### 7. Open chickens.ipynb in the browser and run the cells sequentially.
 
+## Virtual Environment Commands 
+| **Command** |           **Windows**                 |            **Linux/Mac**             | 
+| ----------  | ------------------------------------- | ------------------------------------ |
+|  Create     |    `python -m venv venv`              |   `python3 -m venv venv`             |
+|  Activate   |    `source venv/Scripts/activate`     |   `source venv/bin/activate`         |
+|  Install    |    `pip install -r requirements.txt`  |   `pip install -r requirements.txt`  |
+|  Deactivate |    `deactivate`                       |   `deactivate`                       |
+
+## Overview:
+
 This project analyzes egg production and price trends in the United States from 2016 to 2021. By examining data on table egg production and monthly prices, we identify patterns, seasonal variations, and potential correlations between production volumes and market prices. Once running, the user can expect a narrative-driven exploration in the Jupyter Notebook, including data cleaning, feature engineering, visualizations, and insights into the poultry industry. No coding knowledge is required to follow the explanations, though running the code requires a Python environment.
 Technologies Used
 
@@ -41,8 +51,11 @@ The data is sourced from the United States Department of Agriculture (USDA) Nati
 Egg Prices Dataset (egg-prices.csv)
 
 YEAR: The year of the data record (integer, e.g., 2016).
+
 LOCATION: The geographic location, typically "US TOTAL" for national aggregates (string).
+
 STATE ANSI: ANSI code for the state, blank for US total (string).
+
 ASD CODE: Agricultural Statistics District code, blank for US total (string).
 COUNTY ANSI: ANSI code for the county, blank for US total (string).
 REFERENCE PERIOD: The month of the record (string, e.g., "JAN").
