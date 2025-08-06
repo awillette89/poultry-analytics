@@ -57,39 +57,39 @@
 
 ## Egg Prices Dataset (egg-prices.csv)
 
-- **YEAR (int64)**: YEAR contains the year of the data record.
-- **LOCATION (object)**: LOCATION specifies the geographic location, typically US total for aggregates.
-- **STATE ANSI (object)**: STATE ANSI provides the ANSI code for the state, blank for US total.
-- **ASD CODE (object)**: ASD CODE indicates the agricultural statistics district code, blank for US total.
-- **COUNTY ANSI (object)**: COUNTY ANSI denotes the ANSI code for the county, blank for US total.
-- **REFERENCE PERIOD (object)**: REFERENCE PERIOD identifies the month of the record.
-- **COMMODITY (object)**: COMMODITY specifies the commodity type, which is eggs.
-- **ALL UTILIZATION PRACTICES in $ / DOZEN (float64)**: ALL UTILIZATION PRACTICES in $ / DOZEN provides the average price per dozen for all practices.
-- **ALL UTILIZATION PRACTICES, TABLE in $ / DOZEN (float64)**: ALL UTILIZATION PRACTICES, TABLE in $ / DOZEN provides the average price per dozen for table eggs.
+- **YEAR (int64)**: contains the year of the data record.
+- **LOCATION (object)**: specifies the geographic location, typically US total for aggregates.
+- **STATE ANSI (object)**: provides the ANSI code for the state, blank for US total.
+- **ASD CODE (object)**: indicates the agricultural statistics district code, blank for US total.
+- **COUNTY ANSI (object)**: denotes the ANSI code for the county, blank for US total.
+- **REFERENCE PERIOD (object)**: identifies the month of the record.
+- **COMMODITY (object)**: specifies the commodity type, which is eggs.
+- **ALL UTILIZATION PRACTICES in $ / DOZEN (float64)**: average price per dozen for all practices.
+- **ALL UTILIZATION PRACTICES, TABLE in $ / DOZEN (float64)**: average price per dozen for table eggs.
 
 ## Egg Production Dataset (egg-production.csv)
 
-- **Program (object)**: Program specifies the survey program, typically survey.
-- **Year (int64)**: Year contains the year of production.
-- **Period (object)**: Period identifies the month of production.
-- **Week Ending (object)**: Week Ending provides the week ending date, often blank.
-- **Geo Level (object)**: Geo Level specifies the geographic level, typically state.
-- **State (object)**: State contains the state name.
-- **State ANSI (object)**: State ANSI provides the ANSI code for the state.
-- **Ag District (object)**: Ag District specifies the agricultural district, often blank.
-- **Ag District Code (object)**: Ag District Code provides the code for the agricultural district.
-- **County (object)**: County contains the county name, often blank.
-- **County ANSI (object)**: County ANSI provides the ANSI code for the county.
-- **Zip Code (object)**: Zip Code contains the zip code, often blank.
-- **Region (object)**: Region specifies the region, often blank.
-- **watershed_code (object)**: watershed_code provides the watershed code, typically 00000000.
-- **Watershed (object)**: Watershed contains the watershed name, often blank.
-- **Commodity (object)**: Commodity specifies the commodity, which is eggs.
-- **Data Item (object)**: Data Item provides the data description.
-- **Domain (object)**: Domain specifies the domain category, typically total.
-- **Domain Category (object)**: Domain Category specifies the category, typically not specified.
-- **Value (object)**: Value contains the production value and may include (d) for undisclosed.
-- **CV (%) (object)**: CV (%) provides the coefficient of variation, often blank.
+- **Program (object)**: specifies the survey program, typically survey.
+- **Year (int64)**: ontains the year of production.
+- **Period (object)**: identifies the month of production.
+- **Week Ending (object)**: provides the week ending date, often blank.
+- **Geo Level (object)**: specifies the geographic level, typically state.
+- **State (object)**: contains the state name.
+- **State ANSI (object)**: provides the ANSI code for the state.
+- **Ag District (object)**: specifies the agricultural district, often blank.
+- **Ag District Code (object)**: provides the code for the agricultural district.
+- **County (object)**: contains the county name, often blank.
+- **County ANSI (object)**: provides the ANSI code for the county.
+- **Zip Code (object)**: contains the zip code, often blank.
+- **Region (object)**: specifies the region, often blank.
+- **watershed_code (object)**: provides the watershed code, typically 00000000.
+- **Watershed (object)**: ontains the watershed name, often blank.
+- **Commodity (object)**: specifies the commodity, which is eggs.
+- **Data Item (object)**: provides the data description.
+- **Domain (object)**: specifies the domain category, typically total.
+- **Domain Category (object)**: specifies the category, typically not specified.
+- **Value (object)**: contains the production value and may include (d) for undisclosed.
+- **CV (%) (object)**: provides the coefficient of variation, often blank.
 
 # Data Summary
 
@@ -100,11 +100,5 @@
 - The egg production dataset includes 8,212 rows of state-level monthly production from 2016 to 2021.
 - After cleaning, 2,518 rows remain, focusing on production in dozens with undisclosed "(d)" values removed.
 - The dataset features quantitative production metrics and qualitative location details for regional trends.
-- **Note on missing data**: Some states may appear underrepresented due to "(d)" values (e.g., Arkansas, California in specific months). These were removed for accuracy, which may affect completeness. See the notebook’s cleaning steps for details.
+- **Note on missing data**: Some states may appear underrepresented due to "(d)" values. These were removed for accuracy, which may affect completeness. See the notebook’s cleaning steps for details.
 - Details are available in `chickens.ipynb`, where data is loaded and explored.
-
-# Additional Resources
-
-- **Rubric**: [https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform](https://docs.google.com/forms/d/e/1FAIpQLScNWu_WNJLF0wK-BUuu9JsBGnxFjS72SQmM4Jd5Wy7JngWjug/viewform)
-- **Guidelines**: [https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0](https://docs.google.com/document/d/1fkQFPHQ_80L_xpG3EucxybTVFM556pn0YtlWa0n8Ju0/edit?tab=t.0)
-- **Interview Information**: [https://docs.google.com/document/d/1gumZocblkZjVEG3G96DD-msB8mhJux7GiiCyg47uY24/edit?tab=t.0#heading=h.5i7odw1grzjo](https://docs.google.com/document/d/1gumZocblkZjVEG3G96DD-msB8mhJux7GiiCyg47uY24/edit?tab=t.0#heading=h.5i7odw1grzjo)
