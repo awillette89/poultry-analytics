@@ -44,7 +44,7 @@
 # Project Objective
 
 - This project investigates the relationship between egg production volumes and market prices across the US from 2016 to 2021.
-- **Guiding question**: How do seasonal and state-level production changes correlate with price fluctuations for all egg types and table eggs?
+- **Guiding questions**: What are the seasonal trends in egg production and prices? Which states produce the most eggs?
 - **Insight goal**: Uncover trends to inform poultry industry stakeholders on pricing strategies and production planning.
 
 # Data Source
