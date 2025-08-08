@@ -39,6 +39,7 @@
 - **Matplotlib**: Matplotlib generates visualizations like line plots for price trends and bar charts for state production.
 - **SQLite3**: SQLite3 stores cleaned data in a database and enables SQL queries for retrieval and joins.
 - **Jupyter Notebook**: Jupyter Notebook presents code, comments, and observations in a narrative format.
+- **Geopandas**: Geopandas allows Matplotlib to use actual maps.
 
 
 # Project Objective
