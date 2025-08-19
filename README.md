@@ -71,7 +71,7 @@
 ## Egg Production Dataset (egg-production.csv)
 
 - **Program (object)**: specifies the survey program, typically survey.
-- **Year (int64)**: ontains the year of production.
+- **Year (int64)**: contains the year of production.
 - **Period (object)**: identifies the month of production.
 - **Week Ending (object)**: provides the week ending date, often blank.
 - **Geo Level (object)**: specifies the geographic level, typically state.
@@ -84,7 +84,7 @@
 - **Zip Code (object)**: contains the zip code, often blank.
 - **Region (object)**: specifies the region, often blank.
 - **watershed_code (object)**: provides the watershed code, typically 00000000.
-- **Watershed (object)**: ontains the watershed name, often blank.
+- **Watershed (object)**: contains the watershed name, often blank.
 - **Commodity (object)**: specifies the commodity, which is eggs.
 - **Data Item (object)**: provides the data description.
 - **Domain (object)**: specifies the domain category, typically total.
