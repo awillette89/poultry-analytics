@@ -1,3 +1,6 @@
+# Interactive Dashboard
+https://public.tableau.com/app/profile/amanda.willette/viz/EggAnalytics/Dashboard1?publish=yes
+
 # Project Setup Instructions
 
 ## To Set Up and Run This Project
